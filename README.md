@@ -157,7 +157,47 @@ Community-driven with transparent contributions.
 - Implementation oversight  
 - Compliance alignment  
 - Training & mentoring  
-- Continuous improvement  
+- Continuous improvement
+
+ ## 6.1 Middleware & Database Collaboration
+
+A central requirement is to **organize the collaboration for middleware and databases in concrete terms**.  
+The goal is not only to secure the data, but also to ensure that information flows seamlessly between modules (Business Plan Generator → Project Management → ERP/Accounting → Archive).
+
+### Core Principles
+- **Unified Database Backbone**  
+  PostgreSQL (via Supabase) as the secure, extensible base layer. All business plans, comments, accounting data, and metadata flow into a controlled schema.
+  
+- **Open Middleware Connectors**  
+  Edge functions and lightweight APIs to bridge systems (e.g., Business Plan Generator tasks → Project Management; Project Management costs → Odoo/ERPNext).  
+  These connectors remain open-source so they can be adapted or replaced without lock-in.
+
+- **Schema Extensions**  
+  Support for specialized accounting/controlling fields (cost centers, cost units, project fields). Contributors can propose schema extensions via GitHub pull requests, subject to review for compliance and security.
+
+- **Task & Data Flow Automation**  
+  Tasks created in the Business Plan Generator are automatically:
+  1. Written into the Project Management system.  
+  2. Linked with corresponding cost centers and accounts.  
+  3. Exported or mirrored into ERPNext/Odoo for financial control.  
+  4. Archived in a sovereign, independent repository for long-term portability.
+
+### Collaboration Model
+- **Middleware Team** – builds and maintains connectors, ETL pipelines, and APIs.  
+- **Database Team** – designs schemas, enforces migrations, reviews extensions.  
+- **Security Review** – every schema change or middleware function is subject to RBAC checks, RLS enforcement, and audit logging.  
+
+### Security Overlay
+Even as multiple contributors work on middleware and databases:
+- Data at rest remains AES-256 encrypted.  
+- Transport is TLS-secured.  
+- Role-based access ensures developers only see anonymized/test data when contributing.  
+- Immutable audit logs guarantee traceability of all schema or connector changes.
+
+---
+
+Would you like me to go ahead and **patch this directly into your existing `security_proposal.md`** so your GitHub doc already reflects it?
+
 
 ---
 
