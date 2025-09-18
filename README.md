@@ -49,14 +49,14 @@ The platform combines proven building blocks:
 ```mermaid
 flowchart LR
   User[End User] -->|MFA Login| Auth[Supabase Auth]
-  Auth --> App[Application Zone
-(Business Plan Generator & ERP)]
-  App --> ERP[ERPNext/Odoo Modules]
+  Auth --> App[Application Zone: Business Plan Generator & ERP]
+  App --> ERP[ERPNext / Odoo Modules]
   App --> Archive[Encrypted Archive]
   App --> AI[AI Services]
   ERP --> DB[(ERP Database)]
   Archive --> ObjectStore[(S3-compatible storage)]
   App --> Logs[(Audit Logs)]
+
 ```
 
 ---
