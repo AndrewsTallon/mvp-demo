@@ -196,7 +196,6 @@ Even as multiple contributors work on middleware and databases:
 
 ---
 
-Would you like me to go ahead and **patch this directly into your existing `security_proposal.md`** so your GitHub doc already reflects it?
 
 
 ---
