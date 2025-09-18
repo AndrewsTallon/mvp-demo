@@ -159,7 +159,7 @@ Community-driven with transparent contributions.
 - Training & mentoring  
 - Continuous improvement
 
- ## 6.1 Middleware & Database Collaboration
+ ### 6.1 Middleware & Database Collaboration
 
 A central requirement is to **organize the collaboration for middleware and databases in concrete terms**.  
 The goal is not only to secure the data, but also to ensure that information flows seamlessly between modules (Business Plan Generator → Project Management → ERP/Accounting → Archive).
